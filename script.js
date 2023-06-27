@@ -1,9 +1,41 @@
-async function getapi(){
+async function update(){
     const parse = await fetch("https://api.coindesk.com/v1/bpi/currentprice.json");
-    data = await parse.json();
-    console.log(data);
+    const data = await parse.json();
+
+    code[0].innerHTML='';
+    code[1].innerHTML='';
+    code[2].innerHTML='';
+    desc[0].innerHTML='';
+    desc[1].innerHTML='';
+    desc[2].innerHTML='';
+    rate[0].innerHTML='';
+    rate[1].innerHTML='';
+    rate[2].innerHTML='';
+    time.innerHTML='';
+    
+
+    code[0].innerText= data.bpi.USD.code;
+    code[1].innerText=data.bpi.USD.description;
+    code[2].innerText=data.bpi.USD.rate;
+    desc[0].innerText=data.bpi.GBP.code;
+    desc[1].innerText=data.bpi.GBP.description;
+    desc[2].innerText=data.bpi.GBP.rate;
+    rate[0].innerText=data.bpi.EUR.code;
+    rate[1].innerText=data.bpi.EUR.description;
+    rate[2].innerText=data.bpi.EUR.rate;
+    time.innerText=`The values were last updated on ${data.time.updateduk}`;
 }
 
+const code = document.querySelectorAll('.code');
+const desc = document.querySelectorAll('.desc');
+const rate = document.querySelectorAll('.rate');
+
+update();
+
+const button = document.querySelector(".button");
+button.addEventListener('click',update);
+
+const time = document.querySelector('.time');
 
 
 
@@ -11,7 +43,12 @@ async function getapi(){
 
 
 
-/* The required array
+
+
+
+
+
+/* The derived array
 
 {"time":{"updated":"Jun 27, 2023 05:22:00 UTC","updatedISO":"2023-06-27T05:22:00+00:00","updateduk":"Jun 27, 2023 at 06:22 BST"},
 "disclaimer":"This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org",

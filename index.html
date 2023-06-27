@@ -5,8 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BitCoin Live Updater</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class='header'><strong>BitCoin Live Tracker</strong></div>
+  <table class="table">
+    <tr>
+        <th>CODE</th>
+        <th>DESCRIPTION</th>
+        <th>RATE</th>
+    </tr>
+    <tr class="USD">
+        <td class="code"></td>
+        <td class="desc"></td>
+        <td class="rate"></td>
+    </tr>
+    <tr class="GBP">
+        <td class="code"></td>
+        <td class="desc"></td>
+        <td class="rate"></td>
+    </tr>
+    <tr class="EUR">
+        <td class="code"></td>
+        <td class="desc"></td>
+        <td class="rate"></td>
+    </tr>
+  </table>
+  <button class="button">UPDATE</button>
+  <div class="time"></div>
+  <div class="warning">WARNING:Values only update once every 2 mins</div>
+  <div class="footer">This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org</div>
 </body>
 </html>

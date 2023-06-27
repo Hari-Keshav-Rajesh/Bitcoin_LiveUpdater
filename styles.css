@@ -1,0 +1,17 @@
+.header{
+    display:flex;
+    justify-content: center;
+    font-size: 5vh;
+}
+
+th,td{
+    border:1px black;
+    border-style:solid;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:5vh;
+}
