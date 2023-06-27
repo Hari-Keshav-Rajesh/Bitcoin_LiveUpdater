@@ -15,13 +15,13 @@ async function update(){
     
 
     code[0].innerText= data.bpi.USD.code;
-    code[1].innerText=data.bpi.USD.description;
-    code[2].innerText=data.bpi.USD.rate;
-    desc[0].innerText=data.bpi.GBP.code;
+    code[1].innerText=data.bpi.GBP.code;
+    code[2].innerText=data.bpi.EUR.code;
+    desc[0].innerText=data.bpi.USD.description;
     desc[1].innerText=data.bpi.GBP.description;
-    desc[2].innerText=data.bpi.GBP.rate;
-    rate[0].innerText=data.bpi.EUR.code;
-    rate[1].innerText=data.bpi.EUR.description;
+    desc[2].innerText=data.bpi.EUR.description;
+    rate[0].innerText=data.bpi.USD.rate;
+    rate[1].innerText=data.bpi.GBP.rate;
     rate[2].innerText=data.bpi.EUR.rate;
     time.innerText=`The values were last updated on ${data.time.updateduk}`;
 }
